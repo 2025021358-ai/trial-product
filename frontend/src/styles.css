@@ -1,0 +1,39 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --bg: #0f172a;
+  --panel: #111827;
+  --card: #1f2937;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #38bdf8;
+}
+
+body { margin: 0; background: radial-gradient(circle at top right, #1e293b, var(--bg)); color: var(--text); }
+.layout { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem 4rem; display: grid; gap: 1rem; }
+.hero h1 { margin: 0; font-size: clamp(2rem, 4vw, 3rem); }
+.hero p { color: var(--muted); }
+.eyebrow { text-transform: uppercase; letter-spacing: .12em; color: var(--accent); font-size: .75rem; }
+.panel { background: color-mix(in srgb, var(--panel) 92%, black); border: 1px solid #334155; border-radius: 16px; padding: 1rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: .8rem; }
+.card { background: var(--card); border-radius: 12px; padding: 1rem; }
+.tag { display: inline-block; padding: .2rem .5rem; border: 1px solid #334155; border-radius: 999px; font-size: .75rem; color: var(--accent); }
+.split { display: grid; grid-template-columns: 1.2fr 1fr; gap: 1rem; }
+.form { display: grid; gap: .7rem; }
+label { display: grid; gap: .3rem; font-size: .9rem; color: var(--muted); }
+input, select, textarea, button { border-radius: 10px; border: 1px solid #475569; padding: .6rem .7rem; background: #0b1220; color: var(--text); }
+textarea { min-height: 84px; }
+button { cursor: pointer; background: linear-gradient(135deg, #0ea5e9, #2563eb); border: none; font-weight: 700; }
+button:hover { filter: brightness(1.1); }
+.row { display: grid; gap: .7rem; grid-template-columns: 1fr 1fr; }
+.insight { background: #0b1220; border-radius: 12px; padding: .8rem; border: 1px solid #334155; }
+.timeline { margin: 0; padding-left: 1.1rem; display: grid; gap: .6rem; }
+.badge { display: inline-flex; padding: .3rem .6rem; border-radius: 999px; font-weight: 700; font-size: .8rem; }
+.badge.good { background: #14532d; }
+.badge.neutral { background: #1e3a8a; }
+.badge.risk { background: #7f1d1d; }
+.error { background: #7f1d1d; border-radius: 12px; padding: .8rem; }
+
+@media (max-width: 850px) {
+  .split, .row { grid-template-columns: 1fr; }
+}
